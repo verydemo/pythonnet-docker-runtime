@@ -1,4 +1,4 @@
-name: Build and Push Docker Image that contains dotnet core and python runtime from the bookworm base image
+name: Build and Push Docker Image with pythonnet installed
 
 on:
   push:
@@ -28,6 +28,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./src/dotnet-python/aspnet8_python312/bookworm
+          context: ./src/dotnet-python/aspnet8_python312_recordlinkage/bookworm
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:8.0-3.12-bookworm
+          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:8.0-3.12-bookworm-pythonnet-recordlinkage
