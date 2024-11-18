@@ -1,12 +1,10 @@
 name: Build and Push Docker Image with pythonnet installed
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["Build and Push Docker Image that contains dotnet core and python runtime from the bookworm base image"]
+    types:
+      - completed
 
 jobs:
   build:
