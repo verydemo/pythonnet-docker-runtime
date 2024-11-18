@@ -1,8 +1,8 @@
-name: Build and Push Docker Image with pythonnet installed
+name: build pythonnet and recordlinkage image
 
 on:
   workflow_run:
-    workflows: ["Build and Push Docker Image with pythonnet installed"]
+    workflows: ["build base image"]
     types:
       - completed
 

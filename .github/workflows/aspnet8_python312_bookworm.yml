@@ -1,4 +1,4 @@
-name: Build and Push Docker Image that contains dotnet core and python runtime from the bookworm base image
+name: build base image
 
 on:
   push:
