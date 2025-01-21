@@ -1,12 +1,10 @@
-name: build base image aspnet8
+name: build pythonnet and recordlinkage image aspnet9
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["build base image aspnet9"]
+    types:
+      - completed
 
 jobs:
   build:
@@ -28,6 +26,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./src/dotnet-python/aspnet8_python312/bookworm
+          context: ./src/dotnet-python/aspnet9_python312_recordlinkage/bookworm
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:8.0-3.12-bookworm
+          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:9.0-3.12-bookworm-pythonnet-recordlinkage

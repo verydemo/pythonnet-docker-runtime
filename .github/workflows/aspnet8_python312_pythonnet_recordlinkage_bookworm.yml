@@ -1,8 +1,8 @@
-name: build pythonnet and recordlinkage image
+name: build pythonnet and recordlinkage image aspnet8
 
 on:
   workflow_run:
-    workflows: ["build base image"]
+    workflows: ["build base image aspnet8"]
     types:
       - completed
 
