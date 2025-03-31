@@ -1,4 +1,4 @@
-name: build pythonnet image aspnet8
+name: build pythonnet image aspnet6
 
 on:
   workflow_dispatch:

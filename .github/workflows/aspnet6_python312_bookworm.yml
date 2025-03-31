@@ -1,4 +1,4 @@
-name: build base image aspnet8
+name: build base image aspnet6
 
 on:
   # push:
