@@ -1,4 +1,4 @@
-FROM hquangthinh/dotnet-python:9.0-3.12-bookworm AS base
+FROM jirofly/dotnet-python:9.0-3.12-bookworm AS base
 
 RUN pip install --upgrade pip setuptools wheel
 

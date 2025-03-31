@@ -1,4 +1,4 @@
-FROM hquangthinh/dotnet-python:8.0-3.12-bookworm AS base
+FROM jirofly/dotnet-python:8.0-3.12-bookworm AS base
 
 RUN pip install --upgrade pip setuptools wheel
 RUN pip install pythonnet==3.0.3

@@ -1,10 +1,7 @@
 name: build pythonnet and recordlinkage image aspnet9
 
 on:
-  workflow_run:
-    workflows: ["build base image aspnet9"]
-    types:
-      - completed
+  workflow_dispatch:
 
 jobs:
   build:

@@ -1,4 +1,4 @@
-name: build base image aspnet9
+name: build pythonnet image aspnet8
 
 on:
   workflow_dispatch:
@@ -23,6 +23,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./src/dotnet-python/aspnet9_python312/bookworm
+          context: ./src/dotnet-python/aspnet8_python312_pythonnet/bookworm
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:9.0-3.12-bookworm
+          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:6.0-3.12-bookworm-pythonnet
