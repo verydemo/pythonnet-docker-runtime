@@ -25,4 +25,4 @@ jobs:
         with:
           context: ./src/dotnet-python/aspnet8_python312_pythonnet/bookworm
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/dotnetsdk-python:6.0-3.12-bookworm-pythonnet
+          tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:sdk6.0-3.12-bookworm-pythonnet
