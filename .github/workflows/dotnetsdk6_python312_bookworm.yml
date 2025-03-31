@@ -29,6 +29,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./src/dotnet-python/aspnet8_python312/bookworm
+          context: ./src/dotnet-python/dotnetsdk6_python312/bookworm
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/dotnet-python:sdk6.0-3.12-bookworm
